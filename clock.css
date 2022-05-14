@@ -1,0 +1,284 @@
+* {
+	text-decoration: none;
+	color: #515151;
+}
+
+body {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-color: #E3E3E3;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	bottom: 0;
+	min-width: 100vw;
+	max-width: 100vw;
+	border-radius: 7px 7px 0 0;
+	height: auto;
+	/*background-color: #5e5e5e;	TEMPORARY*/ 
+	padding-left: 7px;
+	padding-right: 7px;
+}
+
+/*.input-container:hover {
+	width: 500px;
+	transition: 0.25s;
+}*/ 
+
+footer,
+.input-container {
+	justify-content: center;
+	align-items: center;
+}
+
+.clock {
+	display: flex;
+	position: fixed;		/*==KEEP==*/ 
+	justify-content: center;
+	z-index: 6;
+	margin-top: 55px;	/*===CLOCK HANDS===*/ 
+}
+
+.clock-second,
+.clock-minute,
+.clock-hour {
+	position: absolute;
+	transform-origin: bottom center;
+	z-index: 2;
+}
+
+.clock-name {
+	margin-left: 900px;
+	margin-top: 335px;
+	position: fixed;
+}
+
+.clock-name p {
+	font-family: monospace;
+	font-size: 0.9em;
+}
+
+.clock-name p:hover {
+	color: rgb(69, 69, 69);
+	font-weight: bold;
+	text-decoration: none;							/*==UNDERLINE WASN'T LOW ENOUGH==*/ 
+}
+
+.clock-second { 
+	background-color: silver;
+	height: 32%;
+	bottom: 50%;
+	animation: time 60s infinite steps(1000000);	/*SWEEP-TICK*/ 
+	z-index: 3;
+	border: 1px solid gray;
+	width: 2px;
+}
+
+.clock-minute {
+	background-color: #545454;
+	height: 30%;
+	width: 8px;
+	bottom: 50%;
+	animation: time 3600s linear infinite;
+	border: 1px solid gray;
+	z-index: 2;
+}
+
+.clock-hour {
+	/*background-color: #393939;*/
+	background-color: #545454;
+	height: 20%;
+	width: 20px;
+	bottom: 50%;
+	border: 1px solid gray;
+	z-index: 1;
+	animation: rotate 43200s infinite linear;
+}
+
+.clock-axis {
+	background-color: silver;
+	width: 11px;
+	height: 11px;
+	border-radius: 50%;
+	z-index: 4;
+	top: 97px;
+	border: 1px solid gray;
+}
+
+.clock,
+.clock-axis {
+	justify-content: center;
+	align-items: center;
+}
+
+/*===CLOCK SIZE===*/ 
+.clock,
+.ball-clock {
+	height: 600px;
+	width: 600px;
+}
+
+/*===IMAGE===*/ 
+.ball-clock {
+	display: flex;
+	position: fixed;
+	margin-top: 55px; /*===WAS 50px, MADE .CLOCK 48px TOO===*/ 
+}
+
+/*===INPUT CONTAINER===*/ 
+.input-container {
+	display: flex;
+	width: 316px;
+	height: 40px;
+	/*border: 1px solid rgb(154, 154, 154);*/
+	border: 4px solid #5e5e5e;
+	border-radius: 10px 10px 0 0;
+	background-color: #ffffff;
+	transition: 0.3s ease-in;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	box-shadow: 0 0 7px 0 #8c8b8b;
+
+}
+
+.input-container:hover {
+	cursor: text;
+	border: 4px solid #5e5e5e;
+	height: 45px;
+	transition: 0.3s ease-out;
+	width: 500px;
+}
+
+.input-container a {
+	font-size: 20px;
+}
+
+.input-container a:hover {
+	cursor: text;
+}
+
+.input-container>input,
+.input-container input {
+	flex-grow: 1;
+	border: none;
+	outline: none;
+	background-color: rgb(255, 255, 255);
+	font-size: 15x;
+	padding: 12px 0 12px 0;
+	outline: none;
+	align-items: center;
+	justify-content: center;
+	color: rgb(21, 21, 21);
+}
+
+#google-favicon {
+	width: 25px;
+	height: 25px;
+	margin: 10px;
+}
+
+#google-favicon:hover {
+	cursor: text;
+}
+
+#mag-glass {
+	width: auto;
+	height: 17px;
+	margin: 10px;
+}
+
+#mag-glass:hover {
+	width: auto;
+	height: 18px;
+}
+
+#google-favicon,
+#mag-glass {
+	margin-top: 14px;	/*USED FOR VERTICALLY CENTERING*/ 
+}
+
+/*=====================================================================================*/
+/*=====================================================================================*/
+@for i from 1 through 60 {
+	section:nth-of-type({i}) {
+		transform: rotateZ(calc(6deg * {i}));
+	}
+}
+
+@keyframes time {
+	to {
+		transform: rotateZ(360deg);
+	}
+}
+/*=====================================================================================*/
+/*=====================================================================================*/
+
+
+
+
+
+
+
+
+
+/*.clock-name {
+	text-align: center;
+	font-size: 12px;
+	font-family: monospace;
+	padding-top: 15px;
+}*/ 
+
+/*#clock-name-a:hover {
+	color: black;
+	text-decoration: underline;
+}*/ 
+
+/*#footer-btm-container {
+	font-size: 12px;
+	font-family: Arial, sans-serif;
+}*/ 
+
+
+
+
+
+
+/*=======================================================================================*/
+/*=======================================================================================*/
+/*=======================================================================================*/
+/*=======================================================================================*/
+/*=======================================================================================*/
+
+/*=======REMOVED=======*/
+/*
+footer p {
+	font-weight: bolder;
+	transition: 0.5s;
+}
+
+footer p:hover {
+	font-size: 14px;
+	font-weight: bold;
+	cursor: default;
+	transition: 0.5s;
+}
+*/
+/*=====================*/ 
+
+/*===IDK===*/ 
+/*.clock, .ball-clock {
+	width: 30%;
+	height: 30%;
+}*/ 
+
+/*border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 100px solid red;*/ 
+
