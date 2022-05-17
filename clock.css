@@ -4,6 +4,8 @@
 }
 
 body {
+	display: flex;
+	flex-direction: column;
 	background-color: #E3E3E3;
 	margin: 0;
 	height: 100vh;
@@ -67,12 +69,6 @@ body {
 	z-index: 4;
 	top: 97px;
 	border: 1px solid gray;
-}
-
-.clock,
-.clock-axis {
-	justify-content: center;
-	align-items: center;
 }
 
 /*===CLOCK SIZE===*/ 
