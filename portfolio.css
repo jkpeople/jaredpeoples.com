@@ -116,25 +116,43 @@ body {
     flex-wrap: wrap;
     /*padding-left: 10px; /*=*/ 
     /*margin-right: 10px; /*=*/ 
-    margin-top: 20px; 
+    margin-top: 45px; 
     margin-bottom: 10px;        /*==TO SEPARATE MAIN FROM FOOTER==*/
 }
 
 .main-container div {
-    min-width: 380px;           /*==AHAHAHAHAHAHAHAHAHAHAHAHAHA==*/
-    min-height: 15em;   /*=!=*/ 
+    min-width: 320px;           /*==AHAHAHAHAHAHAHAHAHAHAHAHAHA==*/
+    min-height: 12em;   /*=!=*/ 
     background-color: gray;
     margin: 5px 5px 5px 5px;
+    transition: 0.25s ease-in;
+}
+
+.main-container div:hover { /*==???==*/ 
+    box-shadow: 1px 1px 1px 1px #515151;
+    transition: 0.25s ease-out;
+    color: white;
 }
 
 /*===H1===*/ 
-.main-container div a h1 {
+.main-container div a p {
     background-color: #515151;
-    color: #b8b8b8;
+    color: #c2c2c2;
     font-size: 100%;
-    padding: 5px;
+    padding: 3px 0 3px 5px;
+    font-weight: bolder;
+    transition: 0.25s ease-out;
 }
 
+/*===H1:HOVER===*/ 
+.main-container div a p:hover { /*==???==*/
+    color: white;
+    transition: 0.25s ease-in;
+}
+
+/*========================================================================*/
+/*========================================================================*/
+/*========================================================================*/
 
 .footer {
     display: flex;
@@ -144,7 +162,6 @@ body {
     width: 100%;
     padding-bottom: 3.5px;
 }
-
 
 .footer p {
     display: flex;
