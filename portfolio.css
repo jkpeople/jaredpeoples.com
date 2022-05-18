@@ -1,24 +1,28 @@
 /*========================================================================*/
 /*===============================HEADER===================================*/
 /*========================================================================*/
-
+/*NOTE: NAV IS GOOOOD*/ 
 * {
     font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 html {
-    width: 100%;
+    width: 100vw;
+    min-width: 390px;
+    height: 100%;
 }
 
 body {
     display: flex;                              /*==Body is main flex container==*/
     flex-direction: column;
     align-items: center;
-    width: 100vw;
     height: 100vh;
     background: silver;
+    margin-right: 10px;
+    width: 100%;
 }
 
 /*===NAVBAR===*/ 
@@ -30,11 +34,10 @@ body {
     background-color: rgb(0, 0, 0, 0.92);
     align-items: center; 
     position: relative;                         /*==FIXED vs RELATIVE==*/ /*==STICKY?==*/ 
-    width: 100vw;
     /*height: 44px;*/ 
     /*z-index: 9999;*/ 
-    min-width: none;
     height: 50px;
+    width: 100%;
 }
 
 /*===NAVBAR TEXT===*/
@@ -44,7 +47,7 @@ body {
     color: #b8b8b8;
     font-size: 0.9em;
     padding: 13px 25px 13px 25px;
-    transition: 0.25s ease-in;
+    transition: 0.25s ease-in;  /*=!=*/ 
 }
 
 /*===HEADER:HOVER===*/ 
@@ -77,7 +80,7 @@ body {
     transition: 0.25s ease-in;
 }
 
-/*===SANDBAR===*/ 
+/*===SANDBAR/IMG===*/ 
 .sandbar {
     width: 30px;
     display: flex;
@@ -93,31 +96,6 @@ body {
     cursor: pointer;
 }
 
-/*===MAIN CONTAINER===*/
-.main-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 6%;
-}
-
-.main-container div {
-    width: 400px;
-    height: 13em;
-    background-color: red;
-    margin: 10px;
-}
-
-/*#home-img {                       /*==REMOVED; USED BG-IMG IN BODY INSTEAD==*/ 
-    /*
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-}*/ 
-
 @media (max-width: 800px) {
     .header-nav li {
       display: none;                            /*==".header-nav li" will disappear when shrinking to mobile==*/
@@ -128,3 +106,55 @@ body {
 /*========================================================================*/
 /*========================================================================*/
 /*========================================================================*/
+
+/*===MAIN CONTAINER===*/
+.main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /*padding-left: 10px; /*=*/ 
+    /*margin-right: 10px; /*=*/ 
+    margin-top: 20px; 
+    margin-bottom: 10px;        /*==TO SEPARATE MAIN FROM FOOTER==*/
+}
+
+.main-container div {
+    min-width: 380px;           /*==AHAHAHAHAHAHAHAHAHAHAHAHAHA==*/
+    min-height: 15em;   /*=!=*/ 
+    background-color: gray;
+    margin: 5px 5px 5px 5px;
+}
+
+/*===H1===*/ 
+.main-container div a h1 {
+    background-color: #515151;
+    color: #b8b8b8;
+    font-size: 100%;
+    padding: 5px;
+}
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 3.5px;
+}
+
+
+.footer p {
+    display: flex;
+    flex-direction: row;
+    color: #515151;
+    font-size: 0.825em;
+    font-weight: bolder;
+}
+
+.footer p:hover {
+    color: #0f0f0f;
+    transition: 0.25s ease-in;
+}
