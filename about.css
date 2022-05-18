@@ -1,27 +1,28 @@
 /*========================================================================*/
 /*===============================HEADER===================================*/
 /*========================================================================*/
-
+/*NOTE: NAV IS GOOOOD*/ 
 * {
     font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 html {
-    width: 100%;
+    width: 100vw;
+    min-width: 390px;
+    height: 100%;
 }
 
 body {
     display: flex;                              /*==Body is main flex container==*/
     flex-direction: column;
     align-items: center;
-    width: 100vw;
     height: 100vh;
-    /*background-image: url("./images/snow_leapord.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;                    
-    background-position: center;*/ 
+    background: silver;
+    margin-right: 10px;
+    width: 100%;
 }
 
 /*===NAVBAR===*/ 
@@ -33,11 +34,10 @@ body {
     background-color: rgb(0, 0, 0, 0.92);
     align-items: center; 
     position: relative;                         /*==FIXED vs RELATIVE==*/ /*==STICKY?==*/ 
-    width: 100vw;
     /*height: 44px;*/ 
     /*z-index: 9999;*/ 
-    min-width: none;
     height: 50px;
+    width: 100%;
 }
 
 /*===NAVBAR TEXT===*/
@@ -47,7 +47,7 @@ body {
     color: #b8b8b8;
     font-size: 0.9em;
     padding: 13px 25px 13px 25px;
-    transition: 0.25s ease-in;
+    transition: 0.25s ease-in;  /*=!=*/ 
 }
 
 /*===HEADER:HOVER===*/ 
@@ -80,29 +80,20 @@ body {
     transition: 0.25s ease-in;
 }
 
-/*===SANDBAR===*/ 
+/*===SANDBAR/IMG===*/ 
 .sandbar {
     width: 30px;
     display: flex;
     /*margin-left: 5px;*/ 
     margin-top: 2px; 
     padding: 11px 15px 11px 15px;
-    opacity: 0.7;                               /*==Darkens image to match other navbar content==*/ 
+    opacity: 0.71;                               /*==Darkens image to match other navbar content==*/ 
 }
 
 /*===SANDBAR:HOVER===*/ 
 .sandbar:hover {
     opacity: 1;                                 /*==Brightens image to match other navbar content when hovering==*/ 
     cursor: pointer;
-}
-
-/*===MAIN CONTAINER===*/
-.main-container {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(211, 211, 211);
-    align-items: center;
-    justify-content: center;
 }
 
 @media (max-width: 800px) {
@@ -116,156 +107,52 @@ body {
 /*========================================================================*/
 /*========================================================================*/
 
-/*==========================================================================*/
-/*=================================CONTAINER================================*/ 
-/*==========================================================================*/
-
-/*===CONTAINER===*/ 
-.container-1 {
+/*===MAIN CONTAINER===*/
+.main-container {
     display: flex;
     flex-direction: column;
-    padding: 5% 10% 5% 10%;     /*==TOP RIGHT BOTTOM LEFT==*/ 
-    background-color: green;
+    margin-top: 45px; 
+    height: 83%;
+    background-color: orange;
+    width: 80%;
+    border-radius: 15px;
 }
 
-/*===ITEM===*/ 
-.container-1-p {
-    font-weight: bold;
-    background-color: blue;
-    text-align: center;         /*==CENTER/BOLD==*/
-    font-size: 2em;
-}
-
-/*===CONTAINER===*/ 
-.container-2 {
+.main-container h1 {
     display: flex;
-    padding: 5% 10% 5% 10%;
-    background-color: green;
+    flex-direction: row;
 }
 
-/*===ITEM===*/ 
-.container-2-p {
-    background-color: blue;
-    font-size: 17px;
-}
 
-/*===CONTAINER===*/
-.container-3 {
+
+
+
+
+
+/*========================================================================*/
+/*========================================================================*/
+/*========================================================================*/
+
+.footer {
     display: flex;
-    padding: 5% 10% 5% 10%;
-    background-color: green;
-}
-
-/*===ITEM===*/
-.container-3-p {
-    background-color: blue;
-    font-size: 17px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*============================================================================================*/
-/*============================================================================================*/
-/*
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.menu-area a {
-    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: silver;
-    background: rgba(0,0,0,0.92);
-    height: 40px;
-    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-    text-decoration: none;
-    font-size: 12px;
-}
-
-.menu-area ul {
-    list-style: none;
-    display: flex;
-}
-
-.menu-area li {
-    position: relative;
     width: 100%;
-    text-align: center;
-}
-
-.menu-area li:hover .dropdown-1>li {
-    display: block;
-    top: 0;
-}
-
-.menu-area li:hover .dropdown-2>li {
-    display: block;
-    top: 0;
-}
-
-.dropdown-1 {
+    padding-bottom: 3.5px;
+    bottom: 0;
     position: absolute;
+}
+
+.footer p {
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    flex-direction: row;
+    color: #515151;
+    font-size: 0.825em;
+    font-weight: bolder;
 }
 
-.dropdown-1 li {
-    display: none;
-    position: relative;
+.footer p:hover {
+    color: #0f0f0f;
+    transition: 0.25s ease-in;
 }
-
-.banner-area {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://i.postimg.cc/Y0YM36yL/aa.jpg);
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position: center center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-
-.banner-area h1 {
-    text-transform: uppercase;
-    color: white;
-    font-size: 75px;
-    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-}
-*/ 
