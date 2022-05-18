@@ -1,5 +1,5 @@
 /*========================================================================*/
-/*===============================HEADER===================================*/
+/*===============================   HEADER   =============================*/
 /*========================================================================*/
 
 * {
@@ -10,18 +10,14 @@
 
 html {
     width: 100%;
+    height: 100vh;
 }
 
 body {
-    display: flex;                              /*==Body is main flex container==*/
+    display: flex;                             
     flex-direction: column;
-    align-items: center;
     width: 100vw;
-    height: 100vh;
-    background-image: url("./images/snow_leapord.jpg"); /*==TESTING==*/ 
-    background-repeat: no-repeat;
-    background-size: cover;                     /*==h0lY=sHiT=!REMEMBER!=!THIS!==*/ 
-    background-position: center;
+    height: 100%;
 }
 
 /*===NAVBAR===*/ 
@@ -100,23 +96,79 @@ body {
 .main-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin-top: 63px;      /*==WRONG==*/ 
+}
+
+.main-container h1 {
+    display: flex;
+    flex-direction: column;
+    color: #515151;
+    font-size: 10em;
+    font-weight: normal;
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    min-width: 400px;
+    align-self: center;
+}
+
+.main-container h2 {
+    display: flex;
+    flex-direction: column;
+    color: #515151;
+    font-size: 0.9em;
+    font-weight: normal;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+
+}
+
+/*.spotify {
+    border-radius: 20px; *ADD WIDGET* 
+}*/ 
+
+/*========================================================================*/
+/*================================  FOOTER  ==============================*/ 
+/*========================================================================*/
+
+.footer {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    padding-bottom: 3.5px;
 }
 
-.spotify {
-    border-radius: 20px;
+.footer a {
+    text-decoration: none;
+}
+
+.footer p {
+    display: flex;
+    flex-direction: column;
+    color: #515151;
+    font-size: 0.825em;
+    font-weight: bolder;
+    margin-top: 55vh;   /*==WRONG==*/ 
+}
+
+.footer p:hover {
+    color: #0f0f0f;
+    transition: 0.25s ease-in;
 }
 
 /*========================================================================*/
 /*========================================================================*/
-/*========================================================================*/
 
-@media (max-width: 800px) {
+/*@media (max-width: 800px) {
     .header-nav li {
       display: none;                            /*==".header-nav li" will disappear when shrinking to mobile==*/
-    }
-}
+    
   
 /*========================================================================*/
 /*========================================================================*/
