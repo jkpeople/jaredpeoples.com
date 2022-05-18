@@ -3,23 +3,33 @@
 	color: #515151;
 }
 
+html {
+	height: 100%;
+	min-width: 390px;
+}
+
 body {
 	display: flex;
 	flex-direction: column;
 	background-color: #E3E3E3;
 	margin: 0;
 	height: 100vh;
+	align-items: center;
+	width: 100%;
+	min-width: 390px;
 }
 
 .clock {
 	display: flex;
 	flex-direction: column;
-	position: fixed;		/*==KEEP==*/ 
+	position: absolute;		/*==KEEP==*/ 
 	justify-content: center;
 	align-items: center;
 	z-index: 6;
 	margin-top: 55px;	/*===CLOCK HANDS===*/ 
 	/*background-color: ;*/ 
+	align-items: center;
+	height: 100vh;
 }
 
 .clock-second,
@@ -74,15 +84,17 @@ body {
 /*===CLOCK SIZE===*/ 
 .clock,
 .ball-clock {
-	height: 600px;
-	width: 600px;
+	width: 700px;
+	height: 700px;
+
 }
 
 /*===IMAGE===*/ 
 .ball-clock {
 	display: flex;
-	position: fixed;
+	position: relative;
 	margin-top: 55px; /*===WAS 50px, MADE .CLOCK 48px TOO===*/ 
+	min-width: 390px;
 }
 
 /*=====================================================================================*/
@@ -126,6 +138,7 @@ footer,
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
 	box-shadow: 0 0 7px 0 #8c8b8b;
+	z-index: 9999;
 
 }
 
