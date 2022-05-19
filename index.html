@@ -27,24 +27,31 @@
         <li><a href="./portfoliio.html">Portfolio</a></li>
         <li><a href="./news.html">News</a></li>
         <li><a href="./contact.html">Contact</a></li>
-        <div>
-            <button onclick="myFunction()">Spotify</button>>
+        <div class="btn-container">
+            <button class="sandbar" onclick="myFunction()"></button>
         </div>
     </ul>
 
-    <div id="myDIV">
+    <div id="spot-div">
         <iframe class="spotify" src="https://open.spotify.com/embed/artist/03HEHGJoLPdARs4nrtUidr?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
     </div>
 
+    <!-- JS FOR SPOTIFY TOGGLE -->
     <script>
         function myFunction() {
-            var x = document.getElementById("myDIV");
+            var x = document.getElementById("spot-div");
             if (x.style.display === "none") {
                 x.style.display = "block";
             } else {
                 x.style.display = "none";
             }
         }
+        document.addEventListener('mouseup', function(e) {
+            var container = document.getElementById('spot-div');
+            if (!container.contains(e.target)) {
+                container.style.display = 'none';
+            }
+        });
     </script>
 
 </body>

@@ -107,28 +107,53 @@ body {
 
 .spotify {
     border-radius: 12px;
-    width: 100%;
     height: 80px;
     margin-top: 5px; /*=*/ 
 }
 
-#myDIV {
+#spot-div {
     border-radius: 12px;
-    width: 50%;
     height: 80px;
     margin-top: 5px; /*=*/
 }
 
+.btn-container {
+    display: flex;
+    background: url(./);
+}
+
+/*===SANDBAR/IMG===*/ 
+.sandbar {
+    width: 10px;
+    height: 10px;
+    display: flex;
+    /*margin-left: 5px;*/ 
+    margin-top: 2px; 
+    padding: 11px 15px 11px 15px;
+    opacity: 0.71;                               /*==Darkens image to match other navbar content==*/ 
+    background-color: green;
+    border-radius: 50%;
+}
+
+/*===SANDBAR:HOVER===*/ 
+.sandbar:hover {
+    opacity: 1;                                 /*==Brightens image to match other navbar content when hovering==*/ 
+    cursor: pointer;
+}
+
+
+
+
+
 /*========================================================================*/
 /*========================================================================*/
 /*========================================================================*/
 
-@media (max-width: 800px) {
+@media (max-width: 500px) {
     .header-nav li {
       display: none;                            /*==".header-nav li" will disappear when shrinking to mobile==*/
     }
 }
-  
 /*========================================================================*/
 /*========================================================================*/
 /*========================================================================*/
