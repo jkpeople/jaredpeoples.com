@@ -108,10 +108,11 @@ body {
 .spotify {
     border-radius: 12px;
     height: 80px;
-    margin-top: 5px; /*=*/ 
+    margin-top: 5px; /*=*/
 }
 
 #spot-div {
+    display: none;
     border-radius: 12px;
     height: 80px;
     margin-top: 5px; /*=*/
