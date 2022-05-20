@@ -9,7 +9,7 @@
 }
 
 html {
-    width: 100%;
+    width: 100vw;
 }
 
 body {
@@ -18,7 +18,7 @@ body {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-image: url("./images/snow_leapord.jpg"); /*==TESTING==*/ 
+    /*background-image: url("./images/snow_leapord.jpg"); /*====*/ 
     background-repeat: no-repeat;
     background-size: cover;                     /*==h0lY=sHiT=!REMEMBER!=!THIS!==*/ 
     background-position: center;
@@ -37,12 +37,12 @@ body {
     /*height: 44px;*/ 
     /*z-index: 9999;*/ 
     min-width: none;
-    height: 50px;
+    /*height: 50px;*/ 
 }
 
 /*===NAVBAR TEXT===*/
 .header-nav a {
-    text-align: center; 
+    /*text-align: center;*/ 
     text-decoration: none;
     color: #b8b8b8;
     font-size: 0.9em;
@@ -80,14 +80,7 @@ body {
     transition: 0.25s ease-in;
 }
 
-/*===MAIN CONTAINER===*/
-.main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
+/*===SPOTIFY CONTAINER===*/ 
 #spot-div {
     display: none;
     border-radius: 12px;
@@ -95,39 +88,75 @@ body {
     margin-top: 5px; /*=*/
 }
 
+/*===SPOTIFY===*/ 
 .spotify {
     border-radius: 12px;
     height: 80px;
     margin-top: 5px; /*=*/
 }
 
+/*===SPOTIFY CONTAINER===*/ 
 .btn-container {
     margin-top: 5px;
     transition: 0.25s ease-in;
 }
 
+/*===SPOTIFY BUTTON===*/ 
 .fa-solid, .fa-bars {
+    display: flex;
     width: 20px;
     height: 20px;
     color: #c2c2c2;
 }
 
+/*===SPOTIFY BUTTON===*/ 
 .fa-solid:hover, .fa-bars:hover {
     color: white;
     transition: 0.25s ease-out;
+}
+
+/*===MAIN CONTAINER===*/
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+    width: 100%;
+}
+
+/*===MAIN CONTAINER IMG===*/ 
+.main-container img {
+    width: 100%;
+    max-height: 65vh;   /*=!=!=!=*/ /*==REMEMBER==*/ 
+    position: relative;
+    opacity: 0.99;
 }
 
 
 
 
 
+
+
+
+
+
+/*================*/ 
+/*=== v MORE v ===*/ 
 /*========================================================================*/
 /*========================================================================*/
 /*========================================================================*/
 
-@media (max-width: 500px) {
+@media (max-width: 675px) {
     .header-nav li {
       display: none;                            /*==".header-nav li" will disappear when shrinking to mobile==*/
+    }
+
+    .main-container img {   /*==WATCH==*/ 
+        min-width: 390px;
+        height: 800px;
+        opacity: 0.99;
     }
 }
 /*========================================================================*/
