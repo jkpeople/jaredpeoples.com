@@ -17,7 +17,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     /*background-image: url("./images/snow_leapord.jpg"); /*====*/ 
     background-repeat: no-repeat;
     background-size: cover;                     /*==h0lY=sHiT=!REMEMBER!=!THIS!==*/ 
@@ -121,7 +121,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 1px;
+    margin-top: 1%;
     width: 100%;
 }
 
@@ -157,6 +157,30 @@ body {
         min-width: 390px;
         height: 800px;
         opacity: 0.99;
+    }
+
+    .header-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header-nav a {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header-nav li {
+
+    }
+
+    /*===SPOTIFY BUTTON===*/ 
+    .fa-solid, .fa-bars {   /*==CHECK==*/ 
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 5px;
     }
 }
 /*========================================================================*/
