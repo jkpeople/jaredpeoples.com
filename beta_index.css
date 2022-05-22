@@ -12,6 +12,7 @@
 
 html {
   height: 100vh;
+
 }
 
 body {
@@ -27,17 +28,21 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
     width: 100%;
     height: 44px;
 }
 
+/*==STYLE==*/ 
+.container-header {
+    background-color: rgba(0,0,0,0.92);
+}
+
 #container-header-item {
-    background-color: black;
     text-align: center;
     color: #c2c2c2;
     font-size: 2em;
     font-weight: bolder;
+    cursor: default;
 }
 
 /*================================================================================*/
@@ -50,13 +55,14 @@ body {
     flex-direction: row;    /*==AUTO==*/
     justify-content: space-between;
     width: 100%;
-    height: fit-content;
+    /*height: fit-content;*/
     justify-content: center;
     font-size: 15px;
     line-height: 2; /*==WATCH==*/
     height: 33px;
 }
 
+.container-nav
 .container-home-icon {
     /*background: #515151;*/ /*==TEMP==*/
 }
@@ -66,11 +72,6 @@ body {
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    /*background-color: #515151;*/  /*==TEMP==*/ 
-}
-
-.container-menu-icon {
-    /*background: #515151;*/ /*==TEMP==*/ 
 }
 
 .container-nav-item {   /*==HIDDEN @ MOBILE===*/
@@ -80,42 +81,51 @@ body {
     align-items: center;
     padding: 0 15px; /*==FROM APPLE==*/
     min-width: 44px;    /*==FROM APPLE==*/
-    /*background-color: #515151;*/  /*==TEMP==*/ 
-    font-size: 13px;
+    font-size: 15px;
     color: #515151;
     height: 100%;
-    font-weight: 400;
+    font-weight: 500;
+    transition: 0.5s ease;
 }
 
 .container-nav-item:hover {
     color: black;
+    transition: 0.5s ease;
 }
 
 .container-home-icon .fa-solid, .container-home-icon .fa-house {
-    margin-right: 15px;
+    padding: 0 15px;
     color: #515151;
+    transition: 0.5s ease;
 }
 
 .container-home-icon .fa-solid:hover, .container-home-icon .fa-house:hover {
     color: black;
+    transition: 0.5s ease;
 }
 
 .container-menu-icon .fa-solid, .container-home-icon .fa-bars {
-    margin-left: 15px;
+    padding: 0 15px;
     color: #515151;
+    transition: 0.5s ease;
 }
 
 .container-menu-icon .fa-solid:hover, .container-home-icon .fa-bars:hover {
     color: black;
+    transition: 0.5s ease;
 }
 
-.container-logo-mobile {
+.logo-mobile {
     display: none;
     flex-direction: column;
     justify-content: center;
     color: #c2c2c2;
-    font-size: 2em;
+    font-size: 1.9em;
     font-weight: bolder;
+}
+
+.mobile-logo-container {
+    display: none;
 }
 
 /*================================================================================*/
@@ -124,40 +134,52 @@ body {
 
 .container-main {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     width: 100%;
-    margin-top: 40px;
-
 }
 
 .container-main-item {
-    width: 99%;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    background-color: #fbfbfd;
 }
 
 #main-img {
-    width: 100%;
-    max-height: 700px;
-    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 45px;
+    width: 95%;
+    max-height: 79.5vh;
+    min-height: 79.5vh;
 }
+
 
 /*================================================================================*/
 
 .container-footer {
-
+    display: flex;
     width: 100%;
     height: 30px;
+    min-height: 30px;
     bottom: 0;
-    position: fixed;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
 }
 
-.footer-container-item {
+.footer-container-item,
+.footer-container-item:hover {
     color: #515151;
-    opacity: 0.7;
+    cursor: default;
 }
 
 /*================================================================================*/
@@ -165,6 +187,14 @@ body {
 /*================================================================================*/
 
 @media (max-width: 475px) {
+    html {
+        min-width: 390px;
+    }
+
+    body {
+        min-width: 390px;
+    }
+
     .container-nav-item {
         display: none;
     }
@@ -174,33 +204,88 @@ body {
     }
 
     .container-nav {
-        background-color: rgba(0,0,0,0.92);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.92);
         height: 50px;
+        min-width: 390px;
+        justify-content: center;
     }
 
-    .container-home-icon .fa-solid, .container-home-icon .fa-house {
-        display: none;
-    }
-    .container-menu-icon .fa-solid, .container-home-icon .fa-bars {
-        color: #c2c2c2;
-        font-size: 1.9em;
+    .container-main {
+        min-width: 390px;
     }
 
-    .container-home-icon .fa-solid:hover, .container-home-icon .fa-house:hover {
-        color: white;
+    .container-footer {
+        min-width: 390px;
     }
 
-    .container-menu-icon .fa-solid:hover, .container-home-icon .fa-bars:hover {
-        color: white;
+    #main-img {
+        max-height: 83vh;
+        min-height: 83vh;
+        min-width: 390px;
     }
 
     .container-logo-mobile {
-        display: flex;
-        padding: 0 60px;
-        font-size: 1.9em;
+        display: contents;
     }
 
-    .container-main-item {
-        width: 100%;
+    .logo-mobile {
+        display: contents;
     }
-} 
+}
+
+
+
+
+
+
+
+
+/*@media (max-width: 475px) {
+    html {
+        min-width: 390px;
+    }
+    /*===HOUSE===*/ 
+    /*.container-home-icon .fa-solid, .container-home-icon .fa-house {
+        display: none;
+    }
+
+    /*===BARS===*/ 
+    /*.container-menu-icon .fa-solid, .container-home-icon .fa-bars {
+        display: flex;
+        flex-direction: column;
+        color: #c2c2c2;
+        font-size: 1.95em;
+        display: flex;
+        padding: 0;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-menu-icon .fa-bars {
+        
+    }
+
+    /*===HOUSE:HOVER===*/ 
+    /*.container-home-icon .fa-solid:hover, .container-home-icon .fa-house:hover {
+        color: white;
+    }
+
+    /*===BARS:HOVER===*/ 
+    /*.container-menu-icon .fa-solid:hover, .container-home-icon .fa-bars:hover {
+        color: white;
+    }
+
+    /*===MOBILE LOGO===*/ 
+    /*.container-logo-mobile {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.9em auto;
+        height: 58px;
+        z-index: 5;
+    }
+}*/ 
