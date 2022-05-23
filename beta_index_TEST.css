@@ -20,30 +20,31 @@ body {
 }
 
 /*================================================================================*/
-/*================================CONTAINER-HEADER================================*/
+/*======================================HEADER====================================*/
 /*================================================================================*/
 
-.container-header {
+.header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 44px;
-}
-
-/*==STYLE==*/ 
-.container-header {
     background-color: rgba(0,0,0,0.92);
 }
 
-#container-header-item {
+#header-item {
     text-align: center;
     color: #d2d0d0;
     font-size: 2em;
     font-weight: bolder;
     cursor: progress;
-    transition: 3.7s ease;
+    transition: 3s ease;
+}
+
+#header-item:hover {
+    transition: 0s;
+    color: rgba(128, 255, 0, 0.769);
 }
 
 /*================================================================================*/
@@ -81,57 +82,41 @@ body {
     color: #515151;
     height: 100%;
     font-weight: 500;
-    transition: 0.5s ease;
+
 }
 
 .container-nav-item:hover {
     color: black;
-    transition: 0.5s ease;
 }
 
 /*===HOUSE===*/ 
 .container-home-icon .fa-solid, .container-home-icon .fa-house {
     padding: 0 15px;
     color: #515151;
-    transition: 0.5s ease;
     font-size: 13.5px;
 }
 
 
 .container-home-icon .fa-solid:hover, .container-home-icon .fa-house:hover {
     color: black;
-    transition: 0.5s ease;
 }
 
 /*===BARS===*/
 .container-menu-icon .fa-solid, .container-home-icon .fa-bars {
     padding: 0 15px;
     color: #515151;
-    transition: 0.5s ease;
     font-size: 14px;
     padding-top: 0.5px;
+    font-weight: 600;
 }
 
 .container-menu-icon .fa-solid:hover, .container-home-icon .fa-bars:hover {
     color: black;
-    transition: 0.5s ease;
 }
 
-.logo-mobile {
+.mobile-logo-container,
+.mobile-logo {
     display: none;
-    flex-direction: column;
-    justify-content: center;
-    color: #c2c2c2;
-    font-size: 1.9em;
-    font-weight: bolder;
-}
-
-.mobile-logo-container {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: orange;
-    height: 200px;
 }
 
 /*================================================================================*/
@@ -193,60 +178,66 @@ body {
 /*================================================================================*/
 
 @media (max-width: 475px) {
-    html {
-        min-width: 390px;
-    }
-
-    body {
-        min-width: 390px;
-    }
 
     .container-nav-item {
         display: none;
     }
 
-    .container-header {
+    .header {
         display: none;
     }
 
     .container-nav {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
         background-color: rgba(0, 0, 0, 0.92);
         height: 50px;
-        min-width: 390px;
+        min-width: 100%;
+        max-width: 100%;
     }
 
-    .container-main {
-        min-width: 390px;
-    }
+    /*.container-nav {      NOT @MEDIA                          /*==NOTE: Apple's .container-nav-item with is 44==*/ 
+    /*   background-color: silver;
+        display: flex;
+        flex-direction: row;    /*==AUTO==*/
+    /*    justify-content: space-between;
+        width: 100%;
+        /*height: fit-content;*/
+    /*    justify-content: center;
+        font-size: 15px;
+        line-height: 2; /*==WATCH==*/
+    /*    height: 33px;
+    }*/ 
 
-    .container-footer {
-        min-width: 390px;
-    }
+
+
 
     #main-img {
         max-height: 83vh;
         min-height: 83vh;
-        min-width: 390px;
-    }
-
-    .container-logo-mobile {
-        display: contents;
-    }
-
-    .logo-mobile {
-        display: contents;
-    }
-
-    .container-nav {
-        justify-content: space-between;
+        min-width: 320px;
     }
 
     .fa-solid.fa-house {
         display: none;
+    }
+
+    .fa-solid.fa-bars {
+        color: #c2c2c2;
+        font-size: 1.6em;
+        padding: 0;
+    }
+
+    .mobile-logo-container {
+        display: contents;
+        justify-content: center;
+
+    }
+
+    .mobile-logo {
+        display: contents;
+        color: #c2c2c2;
+        font-size: 1.8em;
+        font-weight: bolder;
     }
 }
 
