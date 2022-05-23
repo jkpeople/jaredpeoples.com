@@ -1,50 +1,48 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="../Peoples_Jared-Website/favicon_io/favicon-32x32.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="./index.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="./404.css">
+    <link rel="icon" type="image/x-icon" href="../Peoples_Jared-Website/favicon_io/favicon-32x32.png">
+    <script src="https://kit.fontawesome.com/843b7d1bd1.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>J.PEOPLES | 404</title>
 </head>
 
 <body>
-    <ul class="header-nav"> <!--FLEX CONTAINER-->
-        <div class="name-logo">
-            <a href="./index.html">J.PEOPLES</a> <!--LOGO/BTN-->
-        </div>
-        <li><a href="./about.html">About</a>
-            <!-- v FUTURE DROPDOWN v
-            <ul class="header-nav-dropdown">
-                <li><a href="#">About me</a></li>
-                <li><a href="#">Resume</a></li>
-            </ul>
-            --> 
-        </li>
-        <li><a href="./resume.html">Resume</a></li>
-        <li><a href="./portfoliio.html">Portfolio</a></li>
-        <li><a href="./news.html">News</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-        <div>
-            <img class="sandbar" src="./images/sandwich_bar.png" alt="sandbar">
-        </div>
-    </ul>
-
-    <div class="main-container">
-        <h1>404</h1>
-        <hr class="line">
-        <h2>The page you are looking for does't exist.</h2>
-
-
-        <!--<iframe class="spotify" src="https://open.spotify.com/embed/album/6hP0ChTVZGQHn5wB5n6J7K?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> ADD WIDGET!!!--> 
+    <div class="header">  <!--CONTAINER-header-->
+        <div id="header-item">J.PEOPLES</div> <!--container-header-item-->
     </div>
 
-    <div class="footer">
-        <a href="#"> <!-- TO HOME/INDEX -->
-            <p>® 2022 Peoples + Co. LLC</p>
-        </a>
+    <div class="container-nav"> <!--CONTAINER-->
+        <div class="container-home-icon">
+            <a href="#"><i class="fa-solid fa-house"></i></a> <!--Font Awesome icon-->
+        </div>
+        <a href="./about.html"><div class="container-nav-item">About</div></a>
+        <a href="./resume.html"><div class="container-nav-item">Resume</div></a>
+        <a href="./portfoliio.html"><div class="container-nav-item">Portfolio</div></a>
+        <a href="./news.html"><div class="container-nav-item">News</div></a>
+        <a href="./contact.html"><div class="container-nav-item">Contact</div></a>
+        
+        <!-----------------HIDDEN------------------>
+        <div class="mobile-logo-container">
+            <div class="mobile-logo">J.PEOPLES</div>
+        </div>
+        <!-----------------HIDDEN------------------>
+
+        <div class="container-menu-icon">
+            <a><i class="fa-solid fa-bars"></i></a>    <!--Font Awesome icon-->
+        </div>
+    </div>
+
+    <div class="container-main">    <!--CONTAINER-->
+        <div class="container-main-item"></div>
+            <img id="main-img" src="./images/snow_leapord 1200x600.png">
+    </div>
+
+    <div class="container-footer">  <!--CONTAINER-->
+        <div class="footer-container-item">® 2022 PEOPLES + CO. LLC</div>
     </div>
 
 </body>
