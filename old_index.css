@@ -1,0 +1,198 @@
+/*==========================================================================================*/
+/*======================================  HEADER  ==========================================*/
+/*==========================================================================================*/
+
+* {
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100vw;
+}
+
+body {
+    display: flex;                              /*==Body is main flex container==*/
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+    /*background-image: url("./images/snow_leapord.jpg"); /*====*/ 
+    background-repeat: no-repeat;
+    background-size: cover;                     /*==h0lY=sHiT=!REMEMBER!=!THIS!==*/ 
+    background-position: center;
+}
+
+/*===NAVBAR===*/ 
+.header-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /*=*/ 
+    list-style: none; /*==FOR FUTURE DROPDOWN NAV MENU*/ 
+    background-color: rgb(0, 0, 0, 0.92);
+    align-items: center; 
+    position: relative;                         /*==FIXED vs RELATIVE==*/ /*==STICKY?==*/ 
+    width: 100vw;
+    /*height: 44px;*/ 
+    /*z-index: 9999;*/ 
+    min-width: none;
+    /*height: 50px;*/ 
+}
+
+/*===NAVBAR TEXT===*/
+.header-nav a {
+    /*text-align: center;*/ 
+    text-decoration: none;
+    color: #b8b8b8;
+    font-size: 0.9em;
+    padding: 13px 25px 13px 25px;
+    transition: 0.25s ease-in;
+}
+
+/*===HEADER:HOVER===*/ 
+.header-nav a:hover {
+    color: white;
+    opacity: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1)} /*==MESSES UP LAYOUT WHEN REMOVED==*/ 
+
+/*===SUBNAV-DROPDOWN===*/ 
+/*.header-nav-dropdown {
+    display: none;
+}*/ 
+
+/*===LOGO===*/
+.name-logo {
+    display: flex;
+}
+
+/*===LOGO:HOVER===*/ 
+.name-logo:hover {
+    color: white;
+}
+
+.name-logo a {
+    display: flex; /*==TEST==*/ 
+    align-items: center;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #c2c2c2;
+    padding: 11px 15px 11px 15px;
+    transition: 0.25s ease-in;
+}
+
+/*===SPOTIFY CONTAINER===*/ 
+#spot-div {
+    display: none;
+    border-radius: ;
+    margin-top: 5px; /*=*/
+    z-index: 1;
+    background-color: red;
+    width:400px;
+}
+
+/*===SPOTIFY===*/ 
+.spotify, iframe {
+    border-radius: 12px;
+    height: 80px;
+}
+
+/*===SPOTIFY CONTAINER===*/ 
+.btn-container {
+    margin-top: 5px;
+    transition: 0.25s ease-in;
+}
+
+/*===SPOTIFY BUTTON===*/ 
+.fa-solid, .fa-bars {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    color: #c2c2c2;
+}
+
+/*===SPOTIFY BUTTON:HOVER===*/ 
+.fa-solid:hover, .fa-bars:hover {
+    color: white;
+    transition: 0.25s ease-out;
+}
+
+/*===MAIN CONTAINER===*/
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    width: 100%;
+}
+
+/*===MAIN CONTAINER IMG===*/ 
+.main-container img {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-height: 65vh;   /*=!=!=!=*/ /*==REMEMBER==*/ 
+    opacity: 0.99;
+    z-index: 2;
+}
+
+.div-navspot {
+    width: 100%;
+}
+
+@media () {
+
+}
+
+
+
+
+
+
+
+
+/*================*/ 
+/*=== v MORE v ===*/ 
+/*========================================================================*/
+/*========================================================================*/
+/*========================================================================*/
+
+@media (max-width: 675px) {
+    .header-nav li {
+      display: none;                            /*==".header-nav li" will disappear when shrinking to mobile==*/
+    }
+
+    .main-container img {   /*==WATCH==*/ 
+        min-width: 390px;
+        height: 800px;
+        opacity: 0.99;
+    }
+
+    .header-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header-nav a {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header-nav li {
+
+    }
+
+    /*===SPOTIFY BUTTON===*/ 
+    .fa-solid, .fa-bars {   /*==CHECK==*/ 
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 5px;
+    }
+}
+/*========================================================================*/
+/*========================================================================*/
+/*========================================================================*/
+

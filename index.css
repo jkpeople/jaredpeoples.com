@@ -1,198 +1,295 @@
-/*==========================================================================================*/
-/*======================================  HEADER  ==========================================*/
-/*==========================================================================================*/
+/*======================================RESET=====================================*/
+/*================================================================================*/
+/*================================================================================*/
 
 * {
-    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
     margin: 0;
     padding: 0;
+    font-size: 0.9em;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 html {
-    width: 100vw;
+  height: 100vh;
+
 }
 
 body {
-    display: flex;                              /*==Body is main flex container==*/
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
     height: 100%;
-    /*background-image: url("./images/snow_leapord.jpg"); /*====*/ 
-    background-repeat: no-repeat;
-    background-size: cover;                     /*==h0lY=sHiT=!REMEMBER!=!THIS!==*/ 
-    background-position: center;
 }
 
-/*===NAVBAR===*/ 
-.header-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; /*=*/ 
-    list-style: none; /*==FOR FUTURE DROPDOWN NAV MENU*/ 
-    background-color: rgb(0, 0, 0, 0.92);
-    align-items: center; 
-    position: relative;                         /*==FIXED vs RELATIVE==*/ /*==STICKY?==*/ 
-    width: 100vw;
-    /*height: 44px;*/ 
-    /*z-index: 9999;*/ 
-    min-width: none;
-    /*height: 50px;*/ 
-}
+/*================================================================================*/
+/*======================================HEADER====================================*/
+/*================================================================================*/
 
-/*===NAVBAR TEXT===*/
-.header-nav a {
-    /*text-align: center;*/ 
-    text-decoration: none;
-    color: #b8b8b8;
-    font-size: 0.9em;
-    padding: 13px 25px 13px 25px;
-    transition: 0.25s ease-in;
-}
-
-/*===HEADER:HOVER===*/ 
-.header-nav a:hover {
-    color: white;
-    opacity: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1)} /*==MESSES UP LAYOUT WHEN REMOVED==*/ 
-
-/*===SUBNAV-DROPDOWN===*/ 
-/*.header-nav-dropdown {
-    display: none;
-}*/ 
-
-/*===LOGO===*/
-.name-logo {
-    display: flex;
-}
-
-/*===LOGO:HOVER===*/ 
-.name-logo:hover {
-    color: white;
-}
-
-.name-logo a {
-    display: flex; /*==TEST==*/ 
-    align-items: center;
-    font-size: 1.4em;
-    font-weight: bold;
-    color: #c2c2c2;
-    padding: 11px 15px 11px 15px;
-    transition: 0.25s ease-in;
-}
-
-/*===SPOTIFY CONTAINER===*/ 
-#spot-div {
-    display: none;
-    border-radius: ;
-    margin-top: 5px; /*=*/
-    z-index: 1;
-    background-color: red;
-    width:400px;
-}
-
-/*===SPOTIFY===*/ 
-.spotify, iframe {
-    border-radius: 12px;
-    height: 80px;
-}
-
-/*===SPOTIFY CONTAINER===*/ 
-.btn-container {
-    margin-top: 5px;
-    transition: 0.25s ease-in;
-}
-
-/*===SPOTIFY BUTTON===*/ 
-.fa-solid, .fa-bars {
-    display: flex;
-    width: 20px;
-    height: 20px;
-    color: #c2c2c2;
-}
-
-/*===SPOTIFY BUTTON:HOVER===*/ 
-.fa-solid:hover, .fa-bars:hover {
-    color: white;
-    transition: 0.25s ease-out;
-}
-
-/*===MAIN CONTAINER===*/
-.main-container {
+.header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 10vh;
     width: 100%;
+    height: 44px;
+    background-color: rgba(0,0,0,0.92);
 }
 
-/*===MAIN CONTAINER IMG===*/ 
-.main-container img {
+#header-item {
+    text-align: center;
+    color: #d2d0d0;
+    font-size: 2em;
+    font-weight: bolder;
+    cursor: progress;
+    transition: 3s ease;
+}
+
+#header-item:hover {
+    transition: 0s;
+    color: rgba(128, 255, 0, 0.769);
+}
+
+/*================================================================================*/
+/*=======================================NAV======================================*/
+/*================================================================================*/
+
+.container-nav {                                /*==NOTE: Apple's .container-nav-item with is 44==*/ 
+    background-color: silver;
     display: flex;
-    flex-direction: row;
+    flex-direction: row;    /*==AUTO==*/
+    justify-content: space-between;
     width: 100%;
-    max-height: 65vh;   /*=!=!=!=*/ /*==REMEMBER==*/ 
-    opacity: 0.99;
-    z-index: 2;
+    /*height: fit-content;*/
+    justify-content: center;
+    font-size: 15px;
+    line-height: 2; /*==WATCH==*/
+    height: 33px;
 }
 
-.div-navspot {
+.container-home-icon .fa-solid, .container-menu-icon .fa-solid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.container-nav-item {   /*==HIDDEN @ MOBILE===*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px; /*==FROM APPLE==*/
+    min-width: 44px;    /*==FROM APPLE==*/
+    font-size: 15px;
+    color: #515151;
+    height: 100%;
+    font-weight: 500;
+
+}
+
+.container-nav-item:hover {
+    color: black;
+}
+
+/*===HOUSE===*/ 
+.container-home-icon .fa-solid, .container-home-icon .fa-house {
+    padding: 0 15px;
+    color: #515151;
+    font-size: 13.5px;
+}
+
+
+.container-home-icon .fa-solid:hover, .container-home-icon .fa-house:hover {
+    color: black;
+}
+
+/*===BARS===*/
+.container-menu-icon .fa-solid, .container-home-icon .fa-bars {
+    padding: 0 15px;
+    color: #515151;
+    font-size: 14px;
+    padding-top: 0.5px;
+    font-weight: 600;
+}
+
+.container-menu-icon .fa-solid:hover, .container-home-icon .fa-bars:hover {
+    color: black;
+}
+
+.mobile-logo-container,
+.mobile-logo {
+    display: none;
+}
+
+/*================================================================================*/
+/*======================================MAIN=====================================*/
+/*================================================================================*/
+
+.container-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     width: 100%;
 }
 
-@media () {
+.container-main-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    background-color: #fbfbfd;
+}
 
+#main-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 45px;
+    width: 95%;
+    max-height: 79.5vh;
+    min-height: 79.5vh;
 }
 
 
+/*================================================================================*/
 
+.container-footer {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    min-height: 30px;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
 
+.footer-container-item,
+.footer-container-item:hover {
+    color: #515151;
+    cursor: default;
+}
 
+/*================================================================================*/
+/*=====================================@MEDIA=====================================*/
+/*================================================================================*/
 
+@media (max-width: 475px) {
 
-
-/*================*/ 
-/*=== v MORE v ===*/ 
-/*========================================================================*/
-/*========================================================================*/
-/*========================================================================*/
-
-@media (max-width: 675px) {
-    .header-nav li {
-      display: none;                            /*==".header-nav li" will disappear when shrinking to mobile==*/
+    .container-nav-item {
+        display: none;
     }
 
-    .main-container img {   /*==WATCH==*/ 
+    .header {
+        display: none;
+    }
+
+    .container-nav {
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.92);
+        height: 50px;
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    /*.container-nav {      NOT @MEDIA                          /*==NOTE: Apple's .container-nav-item with is 44==*/ 
+    /*   background-color: silver;
+        display: flex;
+        flex-direction: row;    /*==AUTO==*/
+    /*    justify-content: space-between;
+        width: 100%;
+        /*height: fit-content;*/
+    /*    justify-content: center;
+        font-size: 15px;
+        line-height: 2; /*==WATCH==*/
+    /*    height: 33px;
+    }*/ 
+
+
+
+
+    #main-img {
+        max-height: 83vh;
+        min-height: 83vh;
+        min-width: 320px;
+    }
+
+    .fa-solid.fa-house {
+        display: none;
+    }
+
+    .fa-solid.fa-bars {
+        color: #c2c2c2;
+        font-size: 1.6em;
+        padding: 0;
+    }
+
+    .mobile-logo-container .mobile-logo {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .mobile-logo {
+        display: flex;
+        color: #c2c2c2;
+        font-size: 1.8em;
+        font-weight: bolder;
+    }
+}
+
+
+
+
+
+
+
+
+/*@media (max-width: 475px) {
+    html {
         min-width: 390px;
-        height: 800px;
-        opacity: 0.99;
+    }
+    /*===HOUSE===*/ 
+    /*.container-home-icon .fa-solid, .container-home-icon .fa-house {
+        display: none;
     }
 
-    .header-nav {
+    /*===BARS===*/ 
+    /*.container-menu-icon .fa-solid, .container-home-icon .fa-bars {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-    }
-
-    .header-nav a {
+        color: #c2c2c2;
+        font-size: 1.95em;
         display: flex;
-        flex-direction: row;
         padding: 0;
-        margin: 0;
-    }
-
-    .header-nav li {
-
-    }
-
-    /*===SPOTIFY BUTTON===*/ 
-    .fa-solid, .fa-bars {   /*==CHECK==*/ 
+        height: 100%;
         justify-content: center;
         align-items: center;
-        padding-bottom: 5px;
     }
-}
-/*========================================================================*/
-/*========================================================================*/
-/*========================================================================*/
 
+    .container-menu-icon .fa-bars {
+        
+    }
+
+    /*===HOUSE:HOVER===*/ 
+    /*.container-home-icon .fa-solid:hover, .container-home-icon .fa-house:hover {
+        color: white;
+    }
+
+    /*===BARS:HOVER===*/ 
+    /*.container-menu-icon .fa-solid:hover, .container-home-icon .fa-bars:hover {
+        color: white;
+    }
+
+    /*===MOBILE LOGO===*/ 
+    /*.container-logo-mobile {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.9em auto;
+        height: 58px;
+        z-index: 5;
+    }
+}*/ 

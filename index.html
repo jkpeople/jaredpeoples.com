@@ -1,99 +1,47 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="../Peoples_Jared-Website/favicon_io/favicon-32x32.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="./index.js"></script>
-    <link rel="stylesheet" href="./index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./beta_index_TEST.css">
     <script src="https://kit.fontawesome.com/843b7d1bd1.js" crossorigin="anonymous"></script>
-    <title>J.PEOPLES | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST-Beta: J.PEOPLES | Home</title>
 </head>
-
 <body>
-    <ul class="header-nav"> <!--FLEX CONTAINER-->
-        <div class="name-logo">
-            <a href="./index.html">J.PEOPLES</a> <!--LOGO/BTN-->
-        </div>
-        <li><a href="./about.html">About</a>
-            <!-- v FUTURE DROPDOWN v
-            <ul class="header-nav-dropdown">
-                <li><a href="#">About me</a></li>
-                <li><a href="#">Resume</a></li>
-            </ul>
-            --> 
-        </li>
-        <li><a href="./resume.html">Resume</a></li>
-        <li><a href="./portfoliio.html">Portfolio</a></li>
-        <li><a href="./news.html">News</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-        <div class="btn-container">
-            <i class="fa-solid fa-bars" onclick="myFunction()"></i>
-        </div>
-    </ul>   
-    <div class="div-navspot"></div>
-    <div id="spot-div">
-        <iframe class="spotify" src="https://open.spotify.com/embed/album/7wH3vXQZgy9a6PUvMXLayk?utm_source=generator&theme=0"  frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    <div class="header">  <!--CONTAINER-header-->
+        <div id="header-item">J.PEOPLES</div> <!--container-header-item-->
     </div>
 
-    <div class="main-container">
-        <img src="./images/snow_leapord 1200x600.png">
+    <div class="container-nav"> <!--CONTAINER-->
+        <div class="container-home-icon">
+            <a href="#"><i class="fa-solid fa-house"></i></a> <!--Font Awesome icon-->
+        </div>
+        <a href="./about.html"><div class="container-nav-item">About</div></a>
+        <a href="./resume.html"><div class="container-nav-item">Resume</div></a>
+        <a href="./portfoliio.html"><div class="container-nav-item">Portfolio</div></a>
+        <a href="#"><div class="container-nav-item">Links</div></a>
+        <a href="./contact.html"><div class="container-nav-item">Contact</div></a>
+        
+        <!-----------------HIDDEN------------------>
+        <div class="mobile-logo-container">
+            <div class="mobile-logo">J.PEOPLES</div>
+        </div>
+        <!-----------------HIDDEN------------------>
+
+        <div class="container-menu-icon">
+            <a><i class="fa-solid fa-bars"></i></a>    <!--Font Awesome icon-->
+        </div>
     </div>
 
-<!------------------------------------------------------------------------->
-<!------------------------------------------------------------------------->
-<!------------------------------------------------------------------------->
+    <div class="container-main">    <!--CONTAINER-->
+        <div class="container-main-item"></div>
+            <img id="main-img" src="./images/snow_leapord 1200x600.png">
+    </div>
 
-    <!-- JS FOR SPOTIFY TOGGLE -->
-    <script>
-        function myFunction() {
-            var x = document.getElementById("spot-div");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }
-        document.addEventListener('mouseup', function(e) {
-            var container = document.getElementById('spot-div');
-            if (!container.contains(e.target)) {
-                container.style.display = 'none';
-            }
-        });
-    </script>
+    <div class="container-footer">  <!--CONTAINER-->
+        <div class="footer-container-item">® 2022 PEOPLES + CO. LLC</div>
+    </div>
 
 </body>
-
 </html>
-
-
-<!------------------------------------------------------------------------->
-<!------------------------------------------------------------------------->
-<!------------------------------------------------------------------------->
-
-<!--
-<body>
-    <header>
-        <nav>
-            <ul class="header-nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a>
-                    <ul class="header-nav-dropdown">
-                        <li><a href="#">About me</a></li>
-                        <li><a href="#">Resume</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">News</a></li>
-                <a id="name-logo" href="#">J. PEOPLES</a>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Links</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-</body>
-
-</html>
--->
