@@ -151,7 +151,6 @@ body {
     min-height: 79.5vh;
 }
 
-
 /*================================================================================*/
 
 .container-footer {
@@ -192,7 +191,7 @@ body {
         justify-content: space-around;
         background-color: rgba(0, 0, 0, 0.92);
         height: 50px;
-
+        margin: 0;
     }
 
     #main-img {
@@ -207,14 +206,49 @@ body {
 
     .fa-solid.fa-bars {
         color: #c2c2c2;
-        font-size: 1.6em;
+        font-size: 2.1em;
         padding: 0;
+        padding-top: 1.05px;
+        padding-left: 25px;
     }
 
     .container-footer {
         padding-top: 10px;
     }
+
+    .mobile-logo-container {
+        display: contents;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        padding-left: 2.7px;
+    }
+
+    .mobile-logo-container a {
+        color: #c2c2c2;
+        font-weight: bold;
+        font-size: 1.9em;
+    }
 }
+
+@media (min-width: 336px) {
+    html,body {
+        min-width: 336px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -234,13 +268,6 @@ body {
         line-height: 2; /*==WATCH==*/
     /*    height: 33px;
     }*/
-
-
-
-
-
-
-
 
 /*@media (max-width: 475px) {
     html {
