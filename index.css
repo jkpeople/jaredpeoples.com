@@ -40,6 +40,7 @@ body {
     font-weight: bolder;
     cursor: progress;
     transition: 3s ease;
+    width: 50%;
 }
 
 #header-item:hover {
@@ -113,11 +114,10 @@ body {
     color: black;
 }
 
-/*===HIDDEN===*/ 
-.mobile-logo-container,
-.mobile-logo {
+.mobile-logo-container {
     display: none;
 }
+
 
 /*================================================================================*/
 /*======================================MAIN=====================================*/
@@ -160,7 +160,6 @@ body {
     height: 30px;
     min-height: 30px;
     bottom: 0;
-    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -189,27 +188,12 @@ body {
 
     .container-nav {
         display: flex;
+        flex-direction: row;
+        justify-content: space-around;
         background-color: rgba(0, 0, 0, 0.92);
         height: 50px;
-        min-width: 100%;
-        max-width: 100%;
+
     }
-
-    /*.container-nav {      NOT @MEDIA                          /*==NOTE: Apple's .container-nav-item with is 44==*/ 
-    /*   background-color: silver;
-        display: flex;
-        flex-direction: row;    /*==AUTO==*/
-    /*    justify-content: space-between;
-        width: 100%;
-        /*height: fit-content;*/
-    /*    justify-content: center;
-        font-size: 15px;
-        line-height: 2; /*==WATCH==*/
-    /*    height: 33px;
-    }*/ 
-
-
-
 
     #main-img {
         max-height: 83vh;
@@ -227,19 +211,29 @@ body {
         padding: 0;
     }
 
-    .mobile-logo-container .mobile-logo {
-        display: flex;
-        justify-content: center;
-
-    }
-
-    .mobile-logo {
-        display: flex;
-        color: #c2c2c2;
-        font-size: 1.8em;
-        font-weight: bolder;
+    .container-footer {
+        padding-top: 10px;
     }
 }
+
+
+
+
+
+
+/*
+    /*.container-nav {      NOT @MEDIA                          /*==NOTE: Apple's .container-nav-item with is 44==*/ 
+    /*   background-color: silver;
+        display: flex;
+        flex-direction: row;    /*==AUTO==*/
+    /*    justify-content: space-between;
+        width: 100%;
+        /*height: fit-content;*/
+    /*    justify-content: center;
+        font-size: 15px;
+        line-height: 2; /*==WATCH==*/
+    /*    height: 33px;
+    }*/
 
 
 
@@ -268,28 +262,5 @@ body {
         height: 100%;
         justify-content: center;
         align-items: center;
-    }
-
-    .container-menu-icon .fa-bars {
-        
-    }
-
-    /*===HOUSE:HOVER===*/ 
-    /*.container-home-icon .fa-solid:hover, .container-home-icon .fa-house:hover {
-        color: white;
-    }
-
-    /*===BARS:HOVER===*/ 
-    /*.container-menu-icon .fa-solid:hover, .container-home-icon .fa-bars:hover {
-        color: white;
-    }
-
-    /*===MOBILE LOGO===*/ 
-    /*.container-logo-mobile {
-        display: flex;
-        flex-direction: column;
-        font-size: 1.9em auto;
-        height: 58px;
-        z-index: 5;
     }
 }*/ 
