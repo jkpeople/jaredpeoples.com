@@ -163,6 +163,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: white;
+    position: relative;
 }
 
 .footer-container-item,
