@@ -211,11 +211,11 @@ body {
 
 
 
-    #main-img {
+    /*#main-img {
         max-height: 83vh;
         min-height: 83vh;
         min-width: 320px;
-    }
+    }*/ 
 
     .fa-solid.fa-house {
         display: none;

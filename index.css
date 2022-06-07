@@ -163,7 +163,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: white;
-    position: fixed;
+    position: fixed; /*==!==*/ 
 }
 
 .footer-container-item,
