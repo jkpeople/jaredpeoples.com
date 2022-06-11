@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./test_navbar_reset.css"> <!--RESET-->
+    <link rel="stylesheet" href="./test_navbar_reset.css"> <!--CSS RESET-->
     <link rel="stylesheet" href="./test_navbar.css"> <!--CSS-->
     <title>Document</title>
 </head>
 <body>
     
-    <nav> <!--NAVBOX-->
-        <div></div> <!--DIVBOX-->
+    <nav class="nav-main">
+        <div class="btn-toggle-nav" onclick="toggleNav()"></div> <!--attribute:onclick-->
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Portfolio</a></li>
@@ -21,5 +21,18 @@
         </ul>
     </nav>
 
+    <aside class="nav-sidebar"> <!--JS 1-->
+        <ul>
+            <li><span>Projects</span></li>
+            <li><a href="#">Making a website</a></li>
+            <li><a href="#">Creating a videoe</a></li>
+            <li><a href="#">SEO optimizing a website</a></li>
+            <li><a href="#">Walking through the park</a></li>
+            <li><a href="#">Just another day</a></li>
+        </ul>
+    </aside>
+
 </body>
+<script src="main.js"></script> <!--named main bc it's the main js function of page-->
+
 </html>

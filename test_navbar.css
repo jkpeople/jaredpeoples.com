@@ -1,0 +1,114 @@
+body {
+    background-color: #f1f1f1;
+}
+
+/*====================================================================*/
+/*=============================TOP NAV================================*/
+/*====================================================================*/
+
+.nav-main {
+    position: fixed;    /*stays at top while scrolling*/ 
+    top: 0;             /*stays at top while scrolling*/
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1000;
+}
+
+.btn-toggle-nav {
+    width: 60px;
+    height: 100%;
+    background-color: #f98f39;
+    background-image: url(./images/sandwich_bar.png);
+    background-repeat: no-repeat;
+    background-size: 40%; /*=!=*/ 
+    background-position: center;
+    cursor: pointer;
+}
+
+.btn-toggle-nav:hover {
+    opacity: 0.5;
+}
+
+.nav-main ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 15px;
+}
+
+.nav-main ul li {
+    list-style: none;
+    line-height: 60px;
+}
+
+.nav-main ul li a {
+    display: block;
+    height: 100%;
+    padding: 0 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #111;
+    font-family: arial;
+    font-size: 16px;
+    transition: 0.5s ease;
+}
+
+.nav-main ul li a:hover {
+    background-color: rgb(205, 205, 205);
+    transition: 0.5s ease;
+    
+}
+
+/*====================================================================*/
+/*=============================SIDE NAV===============================*/
+/*====================================================================*/
+
+.nav-sidebar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    /*==now you can set height and width for this specific box*/ 
+    width: 50px;    /*==we want sidebar to align with button*/ 
+    height: calc(100vh - 60px); /*==we take the complete height of the browser and subtract 60px from it==*/ 
+    padding: 0 5px;
+    background-color: #1b1b1b;
+    z-index: 1000;  /*==to make sure it doesn't go under the content of the website==*/ 
+    transition: all 0.3s ease-in-out;
+}
+
+/*==all the stylings of sidebar==*/ 
+
+.nav-sidebar ul {   /*==want content hidden==*/ /*==JS 2==*/ 
+    padding-top: 15px;
+    overflow: hidden;   /*==cuts off overflow of sidebar text==*/
+    /*==need to make sure content is hidden until button is clicked vvv==*/
+    visibility: hidden; 
+}
+
+.nav-sidebar ul li {    /*==list items==*/ 
+    line-height: 60px;
+    list-style: none;
+}
+
+.nav-sidebar ul li span, .nav-sidebar ul li a {
+    display: block;
+    height: 60px;
+    /*==if you want to change height to something smaller, have to change line height for .nav-sidebar ul li too==*/ 
+    padding: 0 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: arial;
+    font-size: 16px;
+    /*==sidebar text is overlapping each other |vFIXv|==*/ 
+    white-space: nowrap;    /*==fixes overlapping==*/ 
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.nav-sidebar ul li a:hover {    /*==copied from above, removed span==*/ 
+    background-color: #222;
+}
