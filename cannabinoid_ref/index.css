@@ -9,3 +9,10 @@
         <li>THCp Delta-9-Tetrahydrocannabiphorol</li>
 */
 
+body {
+        background-color: silver;
+}
+
+.main-list {
+        font-weight: bold;
+}
